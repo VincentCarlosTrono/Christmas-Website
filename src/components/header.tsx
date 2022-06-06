@@ -17,16 +17,20 @@ const header = () => {
   const navigations = [
     {
       name: "Home",
+      link: "/",
       isActive: true,
     },
     {
       name: "Celebrate",
+      link: "#celebrate",
     },
     {
       name: "Gifts",
+      link: "#gift",
     },
     {
       name: "New",
+      link: "#new",
     },
   ];
 
@@ -45,9 +49,9 @@ const header = () => {
           <div className="flex gap-10 items-center">
             <ul className="hidden text-center items-center gap-16 text-lg md:flex">
               {navigations.map((navigation: any) => {
-                const { name, isActive } = navigation;
+                const { name, isActive, link } = navigation;
                 return (
-                  <a href="">
+                  <a href={link}>
                     <li
                       className={`"px-2 py-1  hover:text-maroon " ${
                         isActive ? "text-maroon border-b-maroon" : ""

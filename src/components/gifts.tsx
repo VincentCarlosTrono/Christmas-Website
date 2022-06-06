@@ -34,12 +34,12 @@ const gifts = () => {
     },
   ];
   return (
-    <div className="grid-container ">
+    <div className="grid-container " id="gift">
       <div className="col-start-2 col-end-3 p-28">
         <h2 className="text-center font-semibold text-3xl p-10">
           Share A Gift
         </h2>
-        <div className="grid grid-cols-3 gap-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-20">
           {giftLists.map((giftList: any) => {
             const { image, price, name } = giftList;
             return (

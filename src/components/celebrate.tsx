@@ -3,7 +3,7 @@ import Celebrate from "../media/celebrate.png";
 
 const celebrate = () => {
   return (
-    <div className="grid-container py-20">
+    <div className="grid-container py-20" id="celebrate">
       <div className="gap-28 justify-between items-center flex col-start-2 col-end-3 ">
         <div className="  text-center md:text-left md:max-w-md">
           <h2 className=" text-2xl md:text-4xl font-semibold  py-4 ">

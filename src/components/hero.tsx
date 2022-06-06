@@ -3,7 +3,7 @@ import heroImg from "../media/home.png";
 
 const hero = () => {
   return (
-    <div className="grid-container pt-3 text-center md:text-left">
+    <div className="grid-container pt-3 text-center md:text-left" id="/">
       <div className="col-start-2 col-end-3">
         <div className="flex justify-center items-center gap-5   py-24">
           <div className="w-2/4 hidden md:block">

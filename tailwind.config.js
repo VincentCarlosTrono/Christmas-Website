@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       colors: {
         maroon: "#DB3745"
+      },
+      rotate: {
+        '25': '25deg',
       }
    
   
