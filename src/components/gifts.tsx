@@ -54,8 +54,8 @@ const gifts = () => {
                     src={image}
                     alt="images"
                   />
-                  <h1>{price}</h1>
-                  <p>{name}</p>
+                  <h1 className="font-bold">{price}</h1>
+                  <p className="text-gray-500 font-semibold p-2">{name}</p>
                 </div>
               </div>
             );

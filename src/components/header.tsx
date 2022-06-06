@@ -32,7 +32,7 @@ const header = () => {
 
   return (
     <div
-      className={`justify-between flex text-center items-center grid-container p-8 font-semibold  bg-white sticky top-0 w-screen ${
+      className={`z-10 justify-between flex text-center items-center grid-container p-8 font-semibold  bg-white sticky top-0 w-screen ${
         scroll ? "shadow-md ease-in duration-500" : ""
       }`}
     >
