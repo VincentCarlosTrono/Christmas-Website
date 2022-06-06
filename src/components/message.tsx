@@ -3,7 +3,7 @@ import messageImage from "../media/message.png";
 
 const message = () => {
   return (
-    <div className="grid-container  py-10">
+    <div className="grid-container  py-10" data-aos="fade-up">
       <div className="col-start-2 col-end-3 flex justify-evenly items-center bg-maroon rounded-3xl py-20 p-20">
         <div className="max-w-xs">
           <h1 className="text-5xl font-semibold text-white pb-3">

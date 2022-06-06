@@ -5,7 +5,10 @@ const celebrate = () => {
   return (
     <div className="grid-container py-20" id="celebrate">
       <div className="gap-28 justify-between items-center flex col-start-2 col-end-3 ">
-        <div className="  text-center md:text-left md:max-w-md">
+        <div
+          className="  text-center md:text-left md:max-w-md"
+          data-aos="fade-right"
+        >
           <h2 className=" text-2xl md:text-4xl font-semibold  py-4 ">
             Celebrate With A Lot Of Love
           </h2>
@@ -19,7 +22,7 @@ const celebrate = () => {
           </button>
         </div>
 
-        <div className="hidden md:block w-2/4 ">
+        <div className="hidden md:block w-2/4 " data-aos="fade-left">
           <img src={Celebrate} alt="celebrate" />
         </div>
       </div>

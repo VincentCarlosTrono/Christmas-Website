@@ -35,7 +35,10 @@ const feature = () => {
             {features.map((feature: any) => {
               const { image, name, definition } = feature;
               return (
-                <div className="items-center text-center p-10">
+                <div
+                  className="items-center text-center p-10"
+                  data-aos="fade-down"
+                >
                   <div className="flex justify-center hover:-translate-y-2 hover:cursor-pointer">
                     <img className="w-36" src={image} alt="images" />
                   </div>

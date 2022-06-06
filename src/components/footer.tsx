@@ -34,11 +34,13 @@ const footer = () => {
             </p>
             <div>
               <img
+                data-aos="fade-left"
                 className="absolute top-40 right-0 w-60"
                 src={footer1}
                 alt="footer1Img"
               />
               <img
+                data-aos="fade-down"
                 className="absolute top-40 left-0 w-44"
                 src={footer2}
                 alt="footer2Img"

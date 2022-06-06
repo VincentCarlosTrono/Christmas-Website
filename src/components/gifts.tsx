@@ -34,7 +34,7 @@ const gifts = () => {
     },
   ];
   return (
-    <div className="grid-container " id="gift">
+    <div className="grid-container " id="gift" data-aos="fade-up">
       <div className="col-start-2 col-end-3 p-28">
         <h2 className="text-center font-semibold text-3xl p-10">
           Share A Gift

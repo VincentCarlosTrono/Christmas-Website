@@ -28,7 +28,7 @@ const newGift = () => {
     },
   ];
   return (
-    <div className="grid-container pb-32" id="new">
+    <div className="grid-container pb-32" id="new" data-aos="fade-up">
       <div className="col-start-2 col-end-3 text-center">
         <h1 className="p-20 font-bold text-3xl">New Gifts</h1>
         <div className="flex justify-center gap-10">
