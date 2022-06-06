@@ -26,7 +26,7 @@ const feature = () => {
     <div className="grid-container">
       <div className="col-start-2 col-end-3">
         <div>
-          <div className="  flex justify-center text-center p-8">
+          <div className="  flex justify-center text-center p-10">
             <h2 className="max-w-sm font-bold text-3xl  ">
               Start Giving This Christmas
             </h2>

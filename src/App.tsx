@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Hero from "./components/hero";
 import Feature from "./components/feature";
 import Celebrate from "./components/celebrate";
+import Gifts from "./components/gifts";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Feature />
       <Celebrate />
+      <Gifts />
     </div>
   );
 }
