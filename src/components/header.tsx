@@ -68,7 +68,7 @@ const header = () => {
               <box-icon name="menu"></box-icon>
             </button>
 
-            {isMenuOpen ? (
+            {isMenuOpen && (
               <ul className="block text-center absolute top-24 bg-maroon text-white w-full left-0 items-center gap-16 text-lg p-3 md:hidden">
                 {navigations.map((navigation: any) => {
                   const { name } = navigation;
@@ -79,8 +79,6 @@ const header = () => {
                   );
                 })}
               </ul>
-            ) : (
-              ""
             )}
             <div>
               <box-icon name="moon"></box-icon>

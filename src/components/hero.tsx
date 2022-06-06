@@ -7,7 +7,7 @@ const hero = () => {
       <div className="col-start-2 col-end-3">
         <div className="flex justify-center items-center gap-5   py-24">
           <div className="w-2/4 hidden md:block">
-            <img src={heroImg} alt="heroImage" className="" />
+            <img src={heroImg} alt="heroImage" />
           </div>
           <div className="w-2/4">
             <h1 className="text-5xl font-semibold">
