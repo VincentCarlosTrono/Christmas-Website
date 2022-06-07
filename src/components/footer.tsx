@@ -41,7 +41,7 @@ const footer = () => {
               />
               <img
                 data-aos="fade-down"
-                className=" absolute top-60  md:top-0 md:left-3/4 left-40 w-44"
+                className=" absolute top-60  md:top-36 md:left-3/4 left-40 w-44 "
                 src={footer2}
                 alt="footer2Img"
               />
