@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,8 +10,11 @@ import Gifts from "./components/gifts";
 import NewGift from "./components/newGift";
 import Message from "./components/message";
 import Footer from "./components/footer";
+import { ThemeContext } from "./components/ThemeContext";
 
 function App() {
+  const { darkmode } = useContext(ThemeContext);
+
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",
@@ -22,7 +25,7 @@ function App() {
     });
   }, []);
   return (
-    <div className="App">
+    <div className={darkmode ? "dark" : "App"}>
       <Header />
       <Hero />
       <Feature />

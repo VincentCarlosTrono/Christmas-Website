@@ -22,38 +22,40 @@ const footer = () => {
   ];
   return (
     <div className="grid-container">
-      <div className="col-start-2 col-end-3 p-16">
+      <div className="col-start-2 col-end-3 ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
           <div className="">
             <div className="flex items-center">
               <img src={logo} alt="" />
-              <h2 className="font-semibold ">Christmas</h2>
+              <h2 className="font-semibold dark:text-white">Christmas</h2>
             </div>
-            <p className="max-w-xs text-lg text-gray-600">
+            <p className="max-w-xs text-lg text-gray-400">
               This Christmas give a lot of love
             </p>
             <div>
               <img
                 data-aos="fade-left"
-                className="absolute top-40 right-0 w-60"
+                className=" absolute  md:left-0 left-64 w-32 md:w-60 "
                 src={footer1}
                 alt="footer1Img"
               />
               <img
                 data-aos="fade-down"
-                className="absolute top-40 left-0 w-44"
+                className=" absolute top-60  md:top-0 md:left-3/4 left-40 w-44"
                 src={footer2}
                 alt="footer2Img"
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {footerInfos.map((footerInfo: any) => {
               const { title, dif1, dif2, dif3 } = footerInfo;
               return (
-                <div>
-                  <h1 className="font-semibold text-lg py-3">{title}</h1>
-                  <div className="text-gray-600">
+                <div className="">
+                  <h1 className="font-semibold text-lg py-3 dark:text-white">
+                    {title}
+                  </h1>
+                  <div className="text-gray-400">
                     <p className="py-2 hover:text-maroon">{dif1}</p>
                     <p className="py-2 hover:text-maroon">{dif2}</p>
                     <p className="py-2 hover:text-maroon">{dif3}</p>
@@ -63,7 +65,7 @@ const footer = () => {
             })}
           </div>
           <div>
-            <h1 className="font-semibold py-3">Available on</h1>
+            <h1 className="font-semibold py-3 dark:text-white">Available on</h1>
             <div className="w-56">
               <img
                 className="w-40 h-12 hover:opacity-80 cursor-pointer"
@@ -78,7 +80,7 @@ const footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center pt-36 text-gray-600">
+        <div className="flex justify-center py-10 md:p-20 text-gray-400">
           <box-icon color="gray" name="copyright"></box-icon>
           <p>Bedimcode. All rights reserved</p>
         </div>

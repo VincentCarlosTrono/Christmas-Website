@@ -1,8 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../media/logo.png";
+import { ThemeContext } from "./ThemeContext";
 
 const header = () => {
+  const { darkmode, setDarkmode } = useContext(ThemeContext);
+
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const [scroll, setScroll] = useState(0);
@@ -11,7 +14,6 @@ const header = () => {
     document.addEventListener("scroll", () => {
       setScroll(window.scrollY);
     });
-    console.log(window);
   }, []);
 
   const navigations = [
@@ -36,18 +38,18 @@ const header = () => {
 
   return (
     <div
-      className={`z-10 justify-between flex text-center items-center grid-container p-8 font-semibold  bg-white sticky top-0 w-screen ${
-        scroll ? "shadow-md ease-in duration-500" : ""
+      className={`z-10 justify-between flex text-center items-center grid-container p-8 font-semibold dark:bg-blackishRed bg-white sticky top-0 w-screen ${
+        scroll && "shadow-lg dark:shadow-black ease-in duration-500"
       }`}
     >
       <div className="col-start-2 col-end-3">
-        <div className="flex items-center justify-between ">
+        <div className="flex items-center justify-between dark:text-white">
           <div className="flex items-center">
             <img src={logo} alt="logo" className="w-9" />
             <h1 className="">Christmas</h1>
           </div>
-          <div className="flex gap-10 items-center">
-            <ul className="hidden text-center items-center gap-16 text-lg md:flex">
+          <div className="flex justify-center gap-10 items-center">
+            <ul className="hidden text-center items-center gap-16 text-lg md:flex ">
               {navigations.map((navigation: any) => {
                 const { name, isActive, link } = navigation;
                 return (
@@ -64,29 +66,46 @@ const header = () => {
               })}
             </ul>
             <button
-              className=" m-0 p-0 md:hidden"
+              className=" px-4 py-2 md:hidden flex justify-center"
               onClick={() => {
                 setIsMenuOpen(!isMenuOpen);
               }}
             >
-              <box-icon name="menu"></box-icon>
+              {darkmode ? (
+                <box-icon color="white" name="menu"></box-icon>
+              ) : (
+                <box-icon name="menu"></box-icon>
+              )}
             </button>
 
             {isMenuOpen && (
               <ul className="block text-center absolute top-24 bg-maroon text-white w-full left-0 items-center gap-16 text-lg p-3 md:hidden">
                 {navigations.map((navigation: any) => {
-                  const { name } = navigation;
+                  const { name, link } = navigation;
                   return (
-                    <a href="">
+                    <a href={link}>
                       <li className="px-2 py-1  hover:text-maroon ">{name}</li>
                     </a>
                   );
                 })}
               </ul>
             )}
-            <div>
-              <box-icon name="moon"></box-icon>
-            </div>
+
+            <button
+              onClick={() => {
+                setDarkmode(!darkmode);
+              }}
+            >
+              {darkmode ? (
+                <div className="px-4 py-2 flex justify-center ">
+                  <box-icon color="white" name="sun"></box-icon>
+                </div>
+              ) : (
+                <div className="px-4 py-2 flex justify-center ">
+                  <box-icon name="moon"></box-icon>
+                </div>
+              )}
+            </button>
           </div>
         </div>
       </div>

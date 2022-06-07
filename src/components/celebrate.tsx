@@ -9,10 +9,10 @@ const celebrate = () => {
           className="  text-center md:text-left md:max-w-md"
           data-aos="fade-right"
         >
-          <h2 className=" text-2xl md:text-4xl font-semibold  py-4 ">
+          <h2 className=" text-xl px-48 md:px-0 md:text-4xl font-semibold  py-4 dark:text-white">
             Celebrate With A Lot Of Love
           </h2>
-          <p className="text-sm text-gray-500 md:text-xl py-8">
+          <p className="text-sm text-gray-400 md:px-0 px-28 md:text-xl py-8">
             In this holidays, celebrate with much love and peace, offering many
             blessings to our loved ones, friends and neighbors, wishing them a
             good Christmas message.

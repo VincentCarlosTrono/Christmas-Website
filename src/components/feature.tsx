@@ -27,25 +27,29 @@ const feature = () => {
       <div className="col-start-2 col-end-3">
         <div>
           <div className="  flex justify-center text-center p-10">
-            <h2 className="max-w-sm font-bold text-3xl  ">
+            <h2 className="max-w-sm font-bold text-lg md:text-3xl dark:text-white ">
               Start Giving This Christmas
             </h2>
           </div>
-          <div className="block md:flex justify-center gap-11 p-10 ">
+          <div className="md:flex justify-center gap-11 p-10 ">
             {features.map((feature: any) => {
               const { image, name, definition } = feature;
               return (
-                <div
-                  className="items-center text-center p-10"
-                  data-aos="fade-down"
-                >
+                <div className="items-center text-center p-10">
                   <div className="flex justify-center hover:-translate-y-2 hover:cursor-pointer">
-                    <img className="w-36" src={image} alt="images" />
+                    <img
+                      className="w-36"
+                      data-aos="flip-up"
+                      src={image}
+                      alt="images"
+                    />
                   </div>
 
-                  <h1 className="font-semibold text-xl">{name}</h1>
+                  <h1 className="font-semibold text-xl dark:text-white">
+                    {name}
+                  </h1>
                   <div className="w-xs px-5">
-                    <p className="p-2 text-gray-500 ">{definition}</p>
+                    <p className="p-2 text-gray-400 ">{definition}</p>
                   </div>
                 </div>
               );

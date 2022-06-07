@@ -30,21 +30,29 @@ const newGift = () => {
   return (
     <div className="grid-container pb-32" id="new" data-aos="fade-up">
       <div className="col-start-2 col-end-3 text-center">
-        <h1 className="p-20 font-bold text-3xl">New Gifts</h1>
-        <div className="flex justify-center gap-10">
+        <h1 className="p-20 font-bold text-2xl md:text-3xl dark:text-white">
+          New Gifts
+        </h1>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {gifts.map((gift: any) => {
             const { image, price, name } = gift;
             return (
-              <div className="shadow-lg rounded-xl overflow-y-hidden relative">
+              <div className="shadow-lg dark:shadow-black rounded-xl overflow-y-hidden relative">
                 <div className="bg-maroon rounded-b-full py-3 px-10 ">
-                  <img className="w-64" src={image} alt="giftsImages" />
+                  <img
+                    className="w-64 hover:-translate-y-3"
+                    src={image}
+                    alt="giftsImages"
+                  />
                 </div>
                 <div>
-                  <h1 className="font-semibold pt-2">{price}</h1>
-                  <p className="text-gray-600 p-5">{name}</p>
+                  <h1 className="font-semibold pt-2 dark:text-white">
+                    {price}
+                  </h1>
+                  <p className="text-gray-400 p-5">{name}</p>
                 </div>
 
-                <div className="absolute bottom-0 right-0 bg-maroon p-2">
+                <div className="absolute bottom-0 right-0 bg-maroon p-2 hover:cursor-pointer">
                   <box-icon color="white" name="heart"></box-icon>
                 </div>
               </div>
