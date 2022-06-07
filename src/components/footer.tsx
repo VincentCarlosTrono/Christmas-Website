@@ -82,7 +82,7 @@ const footer = () => {
         </div>
         <div className="flex justify-center py-10 md:p-20 text-gray-400">
           <box-icon color="gray" name="copyright"></box-icon>
-          <p>Bedimcode. All rights reserved</p>
+          <p>Vince. All rights reserved</p>
         </div>
       </div>
     </div>
