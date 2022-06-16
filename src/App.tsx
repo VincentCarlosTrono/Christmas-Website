@@ -2,15 +2,15 @@ import React, { useContext, useEffect } from "react";
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Header from "./components/header";
-import Hero from "./components/hero";
-import Feature from "./components/feature";
-import Celebrate from "./components/celebrate";
-import Gifts from "./components/gifts";
-import NewGift from "./components/newGift";
-import Message from "./components/message";
-import Footer from "./components/footer";
-import { ThemeContext } from "./components/ThemeContext";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Feature from "./components/Feature";
+import Celebrate from "./components/Celebrate";
+import Gifts from "./components/Gifts";
+import Message from "./components/Message";
+import Footer from "./components/Footer";
+import { ThemeContext } from "./ContextAPI/ThemeContext";
+import NewGifts from "./components/NewGifts";
 
 function App() {
   const { darkmode } = useContext(ThemeContext);
@@ -31,7 +31,7 @@ function App() {
       <Feature />
       <Celebrate />
       <Gifts />
-      <NewGift />
+      <NewGifts />
       <Message />
       <Footer />
     </div>

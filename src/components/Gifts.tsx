@@ -1,12 +1,14 @@
 import React from "react";
+import { GiftListInterface, GiftLists } from "src/types";
 import Gift1 from "../media/gift1.png";
 import Gift2 from "../media/gift2.png";
 import Gift3 from "../media/gift3.png";
 import Gift4 from "../media/gift4.png";
 import Gift5 from "../media/gift5.png";
+import Title from "./Title";
 
-const gifts = () => {
-  const giftLists = [
+const Gifts = () => {
+  const giftLists: GiftLists = [
     {
       image: Gift1,
       price: "$15",
@@ -36,11 +38,9 @@ const gifts = () => {
   return (
     <div className="grid-container " id="gift" data-aos="fade-up">
       <div className="col-start-2 col-end-3 p-11">
-        <h2 className="text-center font-semibold text-3xl p-10 dark:text-white">
-          Share A Gift
-        </h2>
+        <Title title="Share A Gift" />
         <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-20">
-          {giftLists.map((giftList: any) => {
+          {giftLists.map((giftList: GiftListInterface) => {
             const { image, price, name } = giftList;
             return (
               <div className=" grid justify-center max-w-full">
@@ -66,4 +66,4 @@ const gifts = () => {
   );
 };
 
-export default gifts;
+export default Gifts;

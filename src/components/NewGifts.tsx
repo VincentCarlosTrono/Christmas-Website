@@ -1,11 +1,13 @@
 import React from "react";
+import Title from "./Title";
 import new1 from "../media/new1.png";
 import new2 from "../media/new2.png";
 import new3 from "../media/new3.png";
 import new4 from "../media/new4.png";
+import { GiftInterface, Gifts } from "src/types";
 
-const newGift = () => {
-  const gifts = [
+const NewGifts = () => {
+  const gifts: Gifts = [
     {
       image: new1,
       price: "$15",
@@ -30,11 +32,9 @@ const newGift = () => {
   return (
     <div className="grid-container pb-32" id="new" data-aos="fade-up">
       <div className="col-start-2 col-end-3 text-center">
-        <h1 className="p-20 font-bold text-2xl md:text-3xl dark:text-white">
-          New Gifts
-        </h1>
+        <Title title="New Gifts" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-          {gifts.map((gift: any) => {
+          {gifts.map((gift: GiftInterface) => {
             const { image, price, name } = gift;
             return (
               <div className="shadow-lg dark:shadow-black rounded-xl overflow-y-hidden relative">
@@ -64,4 +64,4 @@ const newGift = () => {
   );
 };
 
-export default newGift;
+export default NewGifts;

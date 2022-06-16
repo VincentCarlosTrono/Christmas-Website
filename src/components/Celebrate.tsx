@@ -1,7 +1,7 @@
 import React from "react";
-import Celebrate from "../media/celebrate.png";
+import celebration from "../media/celebrate.png";
 
-const celebrate = () => {
+const Celebrate = () => {
   return (
     <div className="grid-container py-20" id="celebrate">
       <div className="gap-28 justify-between items-center flex col-start-2 col-end-3 ">
@@ -23,11 +23,11 @@ const celebrate = () => {
         </div>
 
         <div className="hidden md:block w-2/4 " data-aos="fade-left">
-          <img src={Celebrate} alt="celebrate" />
+          <img src={celebration} alt="celebrate" />
         </div>
       </div>
     </div>
   );
 };
 
-export default celebrate;
+export default Celebrate;

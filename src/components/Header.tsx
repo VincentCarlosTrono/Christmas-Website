@@ -1,13 +1,13 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useContext, useEffect, useState } from "react";
+import Menu from "./Menu";
+import { ThemeContext } from "../ContextAPI/ThemeContext";
 import logo from "../media/logo.png";
-import { ThemeContext } from "./ThemeContext";
+import { NavigationInterface } from "src/types";
+import { navigations } from "src/constants";
 
-const header = () => {
+const Header = () => {
   const { darkmode, setDarkmode } = useContext(ThemeContext);
-
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
@@ -15,26 +15,6 @@ const header = () => {
       setScroll(window.scrollY);
     });
   }, []);
-
-  const navigations = [
-    {
-      name: "Home",
-      link: "/",
-      isActive: true,
-    },
-    {
-      name: "Celebrate",
-      link: "#celebrate",
-    },
-    {
-      name: "Gifts",
-      link: "#gift",
-    },
-    {
-      name: "New",
-      link: "#new",
-    },
-  ];
 
   return (
     <div
@@ -50,7 +30,7 @@ const header = () => {
           </div>
           <div className="flex justify-center gap-10 items-center">
             <ul className="hidden text-center items-center gap-16 text-lg md:flex ">
-              {navigations.map((navigation: any) => {
+              {navigations.map((navigation: NavigationInterface) => {
                 const { name, isActive, link } = navigation;
                 return (
                   <a href={link}>
@@ -78,18 +58,7 @@ const header = () => {
               )}
             </button>
 
-            {isMenuOpen && (
-              <ul className="block text-center absolute top-24 bg-maroon text-white w-full left-0 items-center gap-16 text-lg p-3 md:hidden">
-                {navigations.map((navigation: any) => {
-                  const { name, link } = navigation;
-                  return (
-                    <a href={link}>
-                      <li className="px-2 py-1  hover:text-maroon ">{name}</li>
-                    </a>
-                  );
-                })}
-              </ul>
-            )}
+            {isMenuOpen && <Menu />}
 
             <button
               onClick={() => {
@@ -113,4 +82,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

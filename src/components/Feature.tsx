@@ -1,10 +1,12 @@
 import React from "react";
+import Title from "./Title";
 import giving1 from "../media/giving1.png";
 import giving2 from "../media/giving2.png";
 import giving3 from "../media/giving3.png";
+import { FeatureInterface, Features } from "src/types";
 
-const feature = () => {
-  const features = [
+const Feature = () => {
+  const features: Features = [
     {
       image: giving1,
       name: "Surprise Gifts",
@@ -26,13 +28,9 @@ const feature = () => {
     <div className="grid-container">
       <div className="col-start-2 col-end-3">
         <div>
-          <div className="  flex justify-center text-center p-10">
-            <h2 className="max-w-sm font-bold text-lg md:text-3xl dark:text-white ">
-              Start Giving This Christmas
-            </h2>
-          </div>
+          <Title title="Start Giving This Christmas" />
           <div className="md:flex justify-center gap-11 p-10 ">
-            {features.map((feature: any) => {
+            {features.map((feature: FeatureInterface) => {
               const { image, name, definition } = feature;
               return (
                 <div className="items-center text-center p-10">
@@ -61,4 +59,4 @@ const feature = () => {
   );
 };
 
-export default feature;
+export default Feature;
